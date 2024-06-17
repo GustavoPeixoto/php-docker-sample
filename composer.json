@@ -1,0 +1,30 @@
+{
+	"name": "gustavopeixoto/docker-template",
+	"description": "Basic setup to use php, redis and mysql",
+	"type": "docker-template",
+	"authors": [
+		{
+			"name": "Gustavo Peixoto (GustavoPeixoto)",
+			"email": "gustavopcamargos@gmail.com",
+			"homepage": "https://github.com/GustavoPeixoto",
+			"role": "Maintainer"
+		}
+	],
+	"homepage": "https://github.com/GustavoPeixoto",
+	"support": {
+		"issues": "https://github.com/GustavoPeixoto/docker-template/issues",
+		"source": "https://github.com/GustavoPeixoto/docker-template"
+	},
+	"require": {
+		"ext-pdo": "*",
+		"ext-pdo_mysql": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "src"
+		}
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.10.1"
+	}
+}

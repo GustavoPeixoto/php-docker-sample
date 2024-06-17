@@ -1,0 +1,41 @@
+services:
+  nginx:
+    container_name: teste-docker.nginx
+    image: nginx:latest
+    ports:
+      - '8080:80'
+    volumes:
+      - ./:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php
+  php:
+    container_name: teste-docker.php
+    image: teste-docker-php:latest
+    build: ./docker/php
+    depends_on:
+      - mysql
+      - redis
+    volumes:
+      - ./:/var/www/html
+    env_file:
+      - path: ./docker/php/.env
+    working_dir: /var/www/html
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  mysql:
+    container_name: teste-docker.mysql
+    image: mysql:latest
+    volumes:
+      - /docker/mysql/volumes/var/lib/mysql:/var/lib/mysql
+    env_file:
+      - path: ./docker/mysql/.env
+    ports:
+      - 3306:3306
+  redis:
+    container_name: teste-docker.redis
+    image: redis:latest
+    volumes:
+      - /docker/redis/volumes/data:/data
+    ports:
+      - 6379:6379

@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker",
+        "mikestead.dotenv",
+        "EditorConfig.EditorConfig",
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+        "neilbrayfield.php-docblocker",
+        "wongjn.php-sniffer",
+        "phproberto.vscode-php-getters-setters",
+        "ms-vscode-remote.remote-containers"
+    ]
+}

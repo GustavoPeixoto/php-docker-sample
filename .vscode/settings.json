@@ -1,0 +1,24 @@
+{
+  "editor.formatOnSave": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/vendor/*/**": true
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "php.suggest.basic": true,
+  "phpSniffer.autoDetect": true,
+  "phpSniffer.run": "onSave",
+  "phpSniffer.standard": "PSR12",
+  "[php]": {
+    "editor.defaultFormatter": "wongjn.php-sniffer"
+  },
+  "files.eol": "\n"
+}
